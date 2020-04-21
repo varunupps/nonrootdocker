@@ -4,7 +4,7 @@ RUN apt-get update && \
       apt-get -y install sudo
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN chmod 777 /etc/shadow
 RUN echo 'root:docker' | chpasswd
-
 USER 1000
 CMD /bin/bash

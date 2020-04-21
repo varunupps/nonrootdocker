@@ -5,5 +5,5 @@ RUN apt-get update && \
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
-USER docker
+USER 101
 CMD /bin/bash
